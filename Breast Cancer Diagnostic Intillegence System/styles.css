@@ -1,0 +1,136 @@
+/* ================= GOOGLE FONT ================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html, body, [class*="css"] {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+/* ================= NAVIGATION BAR ================= */
+.diagonal-nav {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    padding: 1rem 2rem;
+    border-radius: 0 0 18px 18px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+    flex-wrap: wrap; /* ✅ responsive navbar */
+    animation: fadeInDown 0.8s ease;
+    transition: background 0.5s ease;
+}
+
+/* navbar hover animation */
+.diagonal-nav:hover {
+    background: linear-gradient(90deg, #2a5298, #1e3c72);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= BUTTON STYLING ================= */
+.stButton > button {
+    background: linear-gradient(135deg, #34495e, #2c3e50) !important;
+    color: #f9f9f9 !important;
+    border-radius: 10px !important;
+    padding: 0.6rem 1.4rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, #e74c3c, #c0392b) !important;
+    color: #fff !important;
+    transform: translateY(-3px) scale(1.07);
+    box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* ================= GENERAL LAYOUT ================= */
+.main .block-container {
+    padding: 2rem 3rem;
+    max-width: 100%;
+}
+
+.main-header {
+    font-size: 2.7rem;
+    font-weight: 700;
+    color: #1e3c72;
+    text-align: center;
+    margin-bottom: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    letter-spacing: 1px;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.section-divider {
+    height: 3px;
+    background: linear-gradient(90deg, #1e3c72, #2a5298, #1e3c72);
+    margin: 2rem 0;
+    border: none;
+    border-radius: 2px;
+    animation: expand 1.2s ease;
+}
+
+@keyframes expand {
+    from { width: 0; opacity: 0; }
+    to { width: 100%; opacity: 1; }
+}
+
+/* ================= FOOTER ================= */
+.footer-section {
+    background: linear-gradient(45deg, #1e3c72, #2a5298);
+    color: #f1f1f1;
+    text-align: center;
+    padding: 1rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ================= RESPONSIVENESS ================= */
+@media (max-width: 768px) {
+    .main-header {
+        font-size: 2rem;
+    }
+    .stButton > button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+    .diagonal-nav {
+        gap: 0.6rem;
+        padding: 0.8rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        font-size: 1.6rem;
+    }
+    .stButton > button {
+        font-size: 0.85rem;
+        padding: 0.4rem 0.8rem;
+    }
+    .diagonal-nav {
+        flex-direction: column; /* ✅ stacked for very small screens */
+        border-radius: 0 0 12px 12px;
+    }
+}
